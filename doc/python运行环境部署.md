@@ -27,3 +27,114 @@ Ubuntu 18.04
 
 * 退出虚拟环境</br>
 `deactivate`
+
+* 常用Visual Studio Code扩展</br>
+```
+Name: Trailing Spaces
+Id: shardulm94.trailing-spaces
+Description: Highlight trailing spaces and delete them in a flash!
+Version: 0.3.1
+Publisher: Shardul Mahadik
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces
+```
+
+```
+Name: Beautify
+Id: hookyqr.beautify
+Description: Beautify code in place for VS Code
+Version: 1.4.11
+Publisher: HookyQR
+```
+
+```
+Name: Bracket Pair Colorizer 2
+Id: coenraads.bracket-pair-colorizer-2
+Description: A customizable extension for colorizing matching brackets
+Version: 0.0.28
+Publisher: CoenraadS
+```
+
+```
+Name: Diff
+Id: fabiospampinato.vscode-diff
+Description: Diff 2 opened files with ease. Because running `code --diff path1 path2` is too slow.
+Version: 1.4.0
+Publisher: Fabio Spampinato
+```
+
+```
+Name: Partial Diff
+Id: ryu1kn.partial-diff
+Description: Compare (diff) text selections within a file, across files, or to the clipboard
+Version: 1.4.0
+Publisher: Ryuichi Inagaki
+```
+
+```
+Name: Git History
+Id: donjayamanne.githistory
+Description: View git log, file history, compare branches or commits
+Version: 0.4.6
+Publisher: Don Jayamanne
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory
+```
+
+```
+Name: GitLens — Git supercharged
+Id: eamodio.gitlens
+Description: Supercharge the Git capabilities built into Visual Studio Code — Visualize code authorship at a glance via Git blame annotations and code lens, seamlessly navigate and explore Git repositories, gain valuable insights via powerful comparison commands, and so much more
+Version: 9.6.3
+Publisher: Eric Amodio
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
+```
+
+```
+Name: Markdown All in One
+Id: yzhang.markdown-all-in-one
+Description: All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
+Version: 2.3.1
+Publisher: Yu Zhang
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
+```
+
+```
+Name: Python
+Id: ms-python.python
+Description: Linting, Debugging (multi-threaded, remote), Intellisense, code formatting, refactoring, unit tests, snippets, and more.
+Version: 2019.4.11987
+Publisher: Microsoft
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ms-python.python
+```
+
+```
+Name: vscode-icons
+Id: vscode-icons-team.vscode-icons
+Description: Icons for Visual Studio Code
+Version: 8.6.0
+Publisher: VSCode Icons Team
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons
+```
+
+```
+Name: shellcheck
+Id: timonwong.shellcheck
+Description: An extension to use shellcheck in vscode
+Version: 0.6.0
+Publisher: Timon Wong
+```
+
+```
+Name: shell-format
+Id: foxundermoon.shell-format
+Description: shellscript、Dockerfile、properties、gitignore、dotenv、hosts、jvmoptions... DocumentFormat
+Version: 4.0.5
+Publisher: foxundermoon
+```
+
+```
+Name: Robot Framework Intellisense
+Id: tomiturtiainen.rf-intellisense
+Description: Robot Framework Intellisense
+Version: 2.5.0
+Publisher: Tomi Turtiainen
+```
