@@ -24,10 +24,13 @@ import time
 
 from PyQt.QtCore import SIGNAL, QTimer
 
-#  在终端中使用中文字符  在文件头部加上
+# 一种在终端中使用中文字符的方法（已废弃）
+# sys里已没有setdefaultencoding方法
 # import sys
 # reload(sys)
 # sys.setdefaultencoding('utf-8')
+#
+# https://stackoverflow.com/questions/3828723/why-should-we-not-use-sys-setdefaultencodingutf-8-in-a-py-script
 
 # 一行代码的长度不能超过 79 个字符
 # 在括号 ( 圆括号、方括号、花括号 ) 内部折行是 推荐使用的方式

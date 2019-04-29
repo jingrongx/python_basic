@@ -107,6 +107,60 @@ VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ms-pyth
 ```
 
 ```
+Name: Python for VSCode
+Id: tht13.python
+Description: Python language extension for vscode
+Version: 0.2.3
+Publisher: Thomas Haakon Townsend
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=tht13.python
+```
+
+```
+Name: Python Extension Pack
+Id: donjayamanne.python-extension-pack
+Description: Popular Visual Studio Code extensions for Python
+Version: 1.4.0
+Publisher: Don Jayamanne
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack
+```
+
+```
+Name: Python Extended
+Id: tushortz.python-extended-snippets
+Description: Python Extended is a vscode snippet that makes it easy to write codes in python by providing completion options along with all arguments.
+Version: 0.0.1
+Publisher: Taiwo Kareem
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=tushortz.python-extended-snippets
+```
+
+```
+Name: AREPL for python
+Id: almenon.arepl
+Description: real-time python scratchpad
+Version: 1.0.14
+Publisher: Almenon
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=almenon.arepl
+```
+
+```
+Name: Python Preview
+Id: dongli.python-preview
+Description: Provide Preview for Python Execution.
+Version: 0.0.4
+Publisher: dongli
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=dongli.python-preview
+```
+
+```
+Name: Python Path
+Id: mgesbert.python-path
+Description: Python imports utils.
+Version: 0.0.11
+Publisher: Mathias Gesbert
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=mgesbert.python-path
+```
+
+```
 Name: vscode-icons
 Id: vscode-icons-team.vscode-icons
 Description: Icons for Visual Studio Code
