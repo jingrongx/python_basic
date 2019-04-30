@@ -1,4 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-print("Hello World!")
+def output(info):
+    print(info)
+
+
+def main():
+    output("Hello World!")
+
+if __name__ == '__main__':
+    main()
