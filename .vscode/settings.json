@@ -1,4 +1,5 @@
 {
     "restructuredtext.confPath": "",
-    "python.pythonPath": ".env/bin/python"
+    "python.pythonPath": ".env/bin/python",
+    "commentTranslate.targetLanguage": "zh-CN"
 }
