@@ -11,7 +11,7 @@ def loginfo(logString):
 
 def main():
     UDisk = ('SanDisk', 'Kingston')
-    loginfo(UDisk)
+    loginfo(", ".join(UDisk))
 
     tEmpty = ()
     loginfo(tEmpty)
@@ -22,6 +22,13 @@ def main():
 
     # int num
     num = (1)
+
+    # tuple & list
+    UDisk = ('SanDisk', 'Kingston', ['Lenovo', 'agio'], 'intel')
+    loginfo(UDisk)
+    UDisk[2][0] = '1'
+    UDisk[2][1] = '2'
+    loginfo(UDisk)
 
 
 if __name__ == '__main__':
