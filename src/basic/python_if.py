@@ -36,7 +36,7 @@ def main():
     # 'application' code
     r_log.logger.debug('debug message')
     r_log.logger.info('info message')
-    r_log.logger.warn('warn message')
+    r_log.logger.warning('warn message')
     r_log.logger.error('error message')
     r_log.logger.critical('critical message')
 
