@@ -1,8 +1,8 @@
 * 操作系统</br>
-Ubuntu 18.04
+Ubuntu 18.04, 19.04
 
 * 安装Python3</br>
-`apt instll python3`
+`apt install python3`
 
 * 查看python版本</br>
 ```
