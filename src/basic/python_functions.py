@@ -65,6 +65,34 @@ def quadratic(a, b, c):
     y = (-b - math.sqrt(b * b - 4 * a * c)) / (2 * a)
     return x, y
 
+
+# 把变化大的参数放前面，变化小的参数放后面。变化小的参数就可以作为默认参数。
+def power(x, n=2):
+    # 只能计算正整数次幂
+    # s = 1
+    # while n > 0:
+    #     n = n - 1
+    #     s = s * x
+
+    # 可以计算任意数次幂
+    s = x ** n
+    return s
+
+# 定义默认参数要牢记一点：默认参数必须指向不变对象！
+def add_end(L=None):
+    if L is None:
+        L = []
+    L.append('END')
+    return L
+
+# 定义可变参数，在参数前面加了一个*号。在函数内部，参数numbers接收到的是一个tuple
+def calc(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+
+
 def main():
     # 'application' code
     r_log.logger.debug('debug message')
@@ -83,7 +111,12 @@ def main():
     r = move(100, 100, 60, math.pi / 6)
     r_log.logger.info(r)
     r_log.logger.info(quadratic(a, b, c))
-
+    r_log.logger.info(power(3))
+    r_log.logger.info(power(3, 3/7))
+    r_log.logger.info(add_end([]))
+    r_log.logger.info(add_end([1,2]))
+    r_log.logger.info(calc(*[1,2]))
+    r_log.logger.info(calc(1,2))
 
 if __name__ == '__main__':
     main()
