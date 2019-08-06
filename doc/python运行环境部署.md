@@ -1,8 +1,7 @@
-* 操作系统</br>
 Ubuntu 18.04, 19.04
 
 * 安装Python3</br>
-`apt install python3`
+`sudo apt install python3`
 
 * 查看python版本</br>
 ```
@@ -11,13 +10,10 @@ Ubuntu 18.04, 19.04
 ```
 
 * 安装pip3</br>
-`sudo apt-get install python3-pip`
-
-* 安装虚拟环境</br>
-`pip3 install virtualenv`
+`sudo apt install python3-pip`
 
 * 创建虚拟环境 .env</br>
-`python3 -m virtualenv .env`
+`python3 -m venv .env`
 
 * 激活虚拟环境</br>
 `source .env/bin/activate`
@@ -27,6 +23,26 @@ Ubuntu 18.04, 19.04
 
 * 退出虚拟环境</br>
 `deactivate`
+
+
+Windows 10
+* 安装Python3</br>
+自定义 勾选 配置环境变量path 和 所有用户安装，默认会安装pip
+
+* 创建虚拟环境</br>
+`python -m venv .env`
+
+* 激活虚拟环境</br>
+`.env\scripts\activate.bat`
+
+* Windows 10下PowerShell提示权限错误</br>
+错误信息：</br>
+无法加载文件 .env\scripts\activate.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参
+阅 http://go.microsoft.com/fwlink/?LinkID=135170 中的 about_Execution_Policies。</br>
+以管理员身份打开PowerShell，执行命令：</br>
+`set-executionpolicy remotesigned`
+
+
 
 * 常用Visual Studio Code扩展</br>
 ```
