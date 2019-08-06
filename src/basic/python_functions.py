@@ -4,6 +4,7 @@
 import logging
 import math
 
+
 class r_log():
     # create logger
     logger = logging.getLogger('simple_example')
@@ -18,7 +19,8 @@ class r_log():
     fh.setLevel(logging.DEBUG)
 
     # create formatter
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s: %(message)s')
+    formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s: %(message)s')
 
     # add formatter to ch
     ch.setFormatter(formatter)
@@ -40,6 +42,7 @@ def build_in_functions(*args):
 
     maxNum = max(args)
     r_log.logger.info("The max num is: %s" % (maxNum))
+
 
 def custom_functions(x):
     if not isinstance(x, (int, float)):
@@ -79,6 +82,8 @@ def power(x, n=2):
     return s
 
 # 定义默认参数要牢记一点：默认参数必须指向不变对象！
+
+
 def add_end(L=None):
     if L is None:
         L = []
@@ -86,6 +91,8 @@ def add_end(L=None):
     return L
 
 # 定义可变参数，在参数前面加了一个*号。在函数内部，参数numbers接收到的是一个tuple
+
+
 def calc(*numbers):
     sum = 0
     for n in numbers:
@@ -93,6 +100,8 @@ def calc(*numbers):
     return sum
 
 # 关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict
+
+
 def person_1(name, age, **kw):
     if 'city' in kw:
         # 有city参数
@@ -103,6 +112,8 @@ def person_1(name, age, **kw):
     r_log.logger.info(('name:', name, 'age:', age, 'other:', kw))
 
 # 命名关键字参数时，如果没有可变参数，就必须加一个*作为特殊分隔符。
+
+
 def person_2(name, age, *, city, job):
     r_log.logger.info((name, age, city, job))
 
@@ -110,7 +121,8 @@ def person_2(name, age, *, city, job):
 # 参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数。
 # 对于任意函数，都可以通过类似func(*args, **kw)的形式调用它，无论它的参数是如何定义的。
 def f1(a, b, c=0, *args, **kw):
-    r_log.logger.info(('a =', a, 'b =', b, 'c =', c, 'args =', args, 'kw =', kw))
+    r_log.logger.info(('a =', a, 'b =', b, 'c =', c,
+                       'args =', args, 'kw =', kw))
 
 
 def f2(a, b, c=0, *, d, **kw):
@@ -129,6 +141,16 @@ def product(*num):
         return x
 
 
+def fact(n):
+    return fact_iter(n, 1)
+
+
+def fact_iter(num, product):
+    if num == 1:
+        return product
+    return fact_iter(num - 1, num * product)
+
+
 def main():
     # 'application' code
     r_log.logger.debug('debug message')
@@ -136,10 +158,10 @@ def main():
     r_log.logger.warning('warn message')
     r_log.logger.error('error message')
     r_log.logger.critical('critical message')
-    a=-1
-    b=-100
-    c=-9
-    d=10
+    a = -1
+    b = -100
+    c = -9
+    d = 10
     build_in_functions(a, b, c, d)
     r_log.logger.info(custom_functions(a))
     r_log.logger.info(custom_functions(d))
@@ -150,9 +172,9 @@ def main():
     r_log.logger.info(power(3))
     r_log.logger.info(power(3, 3/7))
     r_log.logger.info(add_end([]))
-    r_log.logger.info(add_end([1,2]))
-    r_log.logger.info(calc(*[1,2]))
-    r_log.logger.info(calc(1,2))
+    r_log.logger.info(add_end([1, 2]))
+    r_log.logger.info(calc(*[1, 2]))
+    r_log.logger.info(calc(1, 2))
     extra = {'city': 'Beijing', 'job': 'Engineer'}
     person_1('Jack', 24, **extra, addr='Chaoyang', zipcode=123456)
     person_2('Jack', 24, city='Beijing', job='Engineer')
@@ -162,7 +184,9 @@ def main():
     args = (1, 2, 3)
     kw = {'d': 88, 'x': '#'}
     f2(*args, **kw)
-    r_log.logger.info(product(1,2,3))
+    r_log.logger.info(product(1, 2, 3))
+    r_log.logger.info(fact(5))
+
 
 if __name__ == '__main__':
     main()
