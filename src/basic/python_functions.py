@@ -92,6 +92,42 @@ def calc(*numbers):
         sum = sum + n * n
     return sum
 
+# 关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict
+def person_1(name, age, **kw):
+    if 'city' in kw:
+        # 有city参数
+        pass
+    if 'job' in kw:
+        # 有job参数
+        pass
+    r_log.logger.info(('name:', name, 'age:', age, 'other:', kw))
+
+# 命名关键字参数时，如果没有可变参数，就必须加一个*作为特殊分隔符。
+def person_2(name, age, *, city, job):
+    r_log.logger.info((name, age, city, job))
+
+
+# 参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数。
+# 对于任意函数，都可以通过类似func(*args, **kw)的形式调用它，无论它的参数是如何定义的。
+def f1(a, b, c=0, *args, **kw):
+    r_log.logger.info(('a =', a, 'b =', b, 'c =', c, 'args =', args, 'kw =', kw))
+
+
+def f2(a, b, c=0, *, d, **kw):
+    r_log.logger.info(('a =', a, 'b =', b, 'c =', c, 'd =', d, 'kw =', kw))
+
+
+def product(*num):
+    if len(num) == 0:
+        raise TypeError
+    elif len(num) == 1:
+        return num[0]
+    else:
+        x = 1
+        for y in num:
+            x = x * y
+        return x
+
 
 def main():
     # 'application' code
@@ -117,6 +153,16 @@ def main():
     r_log.logger.info(add_end([1,2]))
     r_log.logger.info(calc(*[1,2]))
     r_log.logger.info(calc(1,2))
+    extra = {'city': 'Beijing', 'job': 'Engineer'}
+    person_1('Jack', 24, **extra, addr='Chaoyang', zipcode=123456)
+    person_2('Jack', 24, city='Beijing', job='Engineer')
+    args = (1, 2, 3, 4)
+    kw = {'d': 99, 'x': '#'}
+    f1(*args, **kw)
+    args = (1, 2, 3)
+    kw = {'d': 88, 'x': '#'}
+    f2(*args, **kw)
+    r_log.logger.info(product(1,2,3))
 
 if __name__ == '__main__':
     main()
