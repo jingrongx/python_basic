@@ -151,6 +151,11 @@ def fact_iter(num, product):
     return fact_iter(num - 1, num * product)
 
 
+def move(n, a, b, c):
+    if n == 1:
+        print(a, '-->', c)
+
+
 def main():
     # 'application' code
     r_log.logger.debug('debug message')
