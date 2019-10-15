@@ -33,7 +33,7 @@ Windows 10
 `python -m venv .env`
 
 * 激活虚拟环境</br>
-`.env\scripts\activate.bat`
+`.env\Scripts\activate.bat`
 
 * Windows 10下PowerShell提示权限错误</br>
 错误信息：</br>
@@ -41,6 +41,40 @@ Windows 10
 阅 http://go.microsoft.com/fwlink/?LinkID=135170 中的 about_Execution_Policies。</br>
 以管理员身份打开PowerShell，执行命令：</br>
 `set-executionpolicy remotesigned`
+
+```
+网易pypi镜像使用帮助
+
+一、临时使用
+使用pip的时候在后面加上-i参数，指定pip源：
+
+pip install xxx -i https://mirrors.163.com/pypi/simple/
+替换“xxx”为你需要安装的模块名称。
+
+二、永久修改使用
+Linux/Unix中使用：
+
+~/.pip/pip.conf
+添加或修改pip.conf（如果不存在，创建一个）
+
+[global]
+index-url = https://mirrors.163.com/pypi/simple/
+
+Windows中使用：
+
+%APPDATA%/pip/pip.ini
+1.打开此电脑，在最上面的的文件夹窗口输入：%APPDATA%
+
+2.按回车跳转进入目录，并新建一个文件夹：pip
+
+3.创建文件：pip.ini
+
+添加或修改pip.ini（如果不存在，创建一个）
+
+[global]
+index-url = https://mirrors.163.com/pypi/simple/
+```
+
 
 
 
